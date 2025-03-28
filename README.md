@@ -204,11 +204,12 @@ $ git pull
 
 ```mermaid
 flowchart TD
-    A[untracked(неотслеживаемый)] --git add--> B(staged(в списке на коммит) + tracked);
-    B --git commit--> C[tracked(отслеживаемый)];
-    B --Изменения--> D[modified(измененный)];
+    A[untracked] --git add--> B(staged)
+    B --git commit--> C[tracked];
+    B --Изменения--> D[modified];
     D --git add--> B;
     C --Изменения--> D;
+
 ```
 
 ## Оформление коммитов
